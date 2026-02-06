@@ -10,14 +10,10 @@ const postsList = require('./../data/postsArr');
 // rotta GET /posts
 router.get('/', function (req, res) {
 
-    //creo un oggetto con le prop che mi servono 
-    const oggettoPost = {
-        numeroPosts: postsList.length,
-        listaPosts: postsList
-    };
+   //restituisco l'oggetto
+    res.json(postsList);
 
-    //restituisco l'oggetto
-    res.json(oggettoPost);
+   
 });
 
 //inizio crud 
