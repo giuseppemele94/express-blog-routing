@@ -20,7 +20,32 @@ router.get('/', function (req, res)  {
     res.json(oggettoPost);
 });
 
+//inizio crud 
 
+//SHOW
+router.get('/:id', function (req,res) {
+    res.send('Dettagli del post con id ' + req.params.id); 
+}); 
+
+// STORE
+router.post('/', function (req, res) {
+    res.send('Creazione nuovo post');
+});
+
+// UPDATE
+router.put('/:id', function (req, res) {
+    res.send('Modifica del post con id ' + req.params.id);
+});
+
+// MODIFY
+router.patch('/:id', function (req, res) {
+    res.send('Modifica parziale del post ' + req.params.id);
+});
+
+// DELETE
+router.delete('/:id', function (req, res) {
+    res.send('Eliminazione del post ' + req.params.id);
+});
 
 // esporta l'istanza di queste rotte
 module.exports = router;

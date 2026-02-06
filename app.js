@@ -1,5 +1,4 @@
 const express = require('express');
-const postsArr = require('./data/postsArr');
 const app = express();
 const port = 3000;
 
